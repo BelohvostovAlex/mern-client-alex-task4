@@ -1,5 +1,3 @@
-interface IProps {}
-
 export const makeStyles = () => ({
 	loginPageWrapper: {
 		height: '100vh',

@@ -1,5 +1,3 @@
-interface IProps {}
-
 export const makeStyles = () => ({
 	loginFormWrapper: {
 		width: '40vw',
