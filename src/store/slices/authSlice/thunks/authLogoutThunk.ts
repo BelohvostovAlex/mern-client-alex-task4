@@ -8,6 +8,7 @@ export const logout = createAsyncThunk('auth/logout', async (_, thunkAPI) => {
 
 		localStorage.removeItem('name');
 		localStorage.removeItem('auth');
+		localStorage.removeItem('token');
 	} catch (error) {
 		return thunkAPI.rejectWithValue(error);
 	}

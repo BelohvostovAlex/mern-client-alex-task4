@@ -11,6 +11,7 @@ export const login = createAsyncThunk(
 			if (data) {
 				localStorage.setItem('name', data.name);
 				localStorage.setItem('auth', 'true');
+				localStorage.setItem('token', data.token);
 				return data;
 			} else {
 				throw Error('incorrect');
