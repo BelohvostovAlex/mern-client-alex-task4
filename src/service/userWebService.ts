@@ -1,24 +1,40 @@
-import $api from '../http/axiosApi';
+import $api from "../http/axiosApi";
 
 export const getUsersWebService = async (endpoint: string) => {
-	const {data} = await $api.get(endpoint);
-	return data;
+  try {
+    const { data } = await $api.get(endpoint);
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export const getCurrentUserWebService = async (
-	name: string,
-	endpoint: string
+  name: string,
+  endpoint: string
 ) => {
-	const {data} = await $api.post(endpoint, {name});
-	return data;
+  try {
+    const { data } = await $api.post(endpoint, { name });
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export const blockUserWebService = async (id: string) => {
-	const {data} = await $api.patch('/status/block', {id});
-	return data;
+  try {
+    const { data } = await $api.patch("/status/block", { id });
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 };
 
 export const unblockUserWebService = async (id: string) => {
-	const {data} = await $api.patch('/status/unblock', {id});
-	return data;
+  try {
+    const { data } = await $api.patch("/status/unblock", { id });
+    return data;
+  } catch (error) {
+    console.log(error);
+  }
 };
